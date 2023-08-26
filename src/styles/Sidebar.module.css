@@ -1,11 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  margin: 1.5em;
+  padding: 2em 0.7em;
+  background-color: #fff;
+  border-radius: 3em;
+}
+
 .links {
   display: flex;
   flex-direction: column;
 }
 
 .links span {
+  display: flex;
   margin: 0.4em 0.8em;
   padding: 0.7em 0.7em 0.4em 0.7em;
-  border-radius: 50%;
+  border-radius: 3em;
   cursor: pointer;
+}
+
+.links span p {
+  text-align: left;
+  padding: 0em 5em;
+  margin: auto;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #006b6c;
+}
+
+.links span:hover {
+  background-color: #e0ffff;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  padding: 4em 0em 0em;
+}
+
+.profile p {
+  padding: 0em 5em;
+  margin: auto;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #006b6c;
+}
+
+.profile button {
+  background-color: #006b6c;
+  border-radius: 1em;
+  padding: 0.3em 2em;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 3.5em;
 }
