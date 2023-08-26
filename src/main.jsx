@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Login from "./pages/login.jsx";
+import Login from "./pages/Login.jsx";
 import Feed from "./pages/Feed.jsx";
 import Settings from "./pages/Settings.jsx";
 
