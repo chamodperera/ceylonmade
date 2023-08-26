@@ -1,0 +1,11 @@
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links span {
+  margin: 0.4em 0.8em;
+  padding: 0.7em 0.7em 0.4em 0.7em;
+  border-radius: 50%;
+  cursor: pointer;
+}
