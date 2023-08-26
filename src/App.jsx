@@ -1,6 +1,8 @@
 import "./App.css";
 import Feed from "./components/Feed";
 import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +12,11 @@ function App() {
       </div>
 
       <div className="body">
-        <Feed />
+        <Outlet />
+      </div>
+
+      <div>
+        <Sidebar />
       </div>
     </div>
   );
