@@ -13,10 +13,6 @@ function App() {
       <div className="body">
         <Outlet />
       </div>
-
-      <div>
-        <Sidebar />
-      </div>
     </div>
   );
 }

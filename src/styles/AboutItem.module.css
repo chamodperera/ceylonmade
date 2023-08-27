@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 1.5em;
+  background-color: #fff;
+  border-radius: 3em;
+  color: #006b6c;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  width: 50%;
+}
+
+.rotated {
+  transform: rotate(270deg);
+}

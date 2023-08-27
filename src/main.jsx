@@ -6,6 +6,7 @@ import "./index.css";
 import Login from "./pages/Login.jsx";
 import Feed from "./pages/Feed.jsx";
 import Settings from "./pages/Settings.jsx";
+import AboutItem from "./pages/AboutItem.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/settings",
         element: <Settings />,
+      },
+      {
+        path: "/AboutItem",
+        element: <AboutItem />,
       },
     ],
   },
