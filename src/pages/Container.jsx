@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import { Sidebar } from "@phosphor-icons/react";
 
 export default function Container() {
   return (
@@ -13,9 +12,9 @@ export default function Container() {
         <Outlet />
       </div>
 
-      <div>
+      {/* <div>
         <Sidebar />
-      </div>
+      </div> */}
     </div>
   );
 }

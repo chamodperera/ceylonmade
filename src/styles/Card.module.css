@@ -1,7 +1,64 @@
 .container {
-  background-color: #fff;
+  display: flex;
+  align-items: end;
+  background-size: cover;
   padding: 1em;
-  padding-top: 100px;
-  width: max-content;
-  color: black;
+  /* padding-top: 90px;
+  width: max-content; */
+  min-width: 300px;
+  color: #1c1c1c;
+  border-radius: 1.2em;
+  text-align: left;
+}
+.infoContainerItem,
+.infoContainerBlog {
+  display: flex;
+  flex-direction: column;
+}
+.price {
+  max-width: max-content;
+  background-color: #e0ffff;
+  padding: 0.3em;
+  border-radius: 0.5em;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.title {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: #006b6c;
+}
+.infoContainerItem .info {
+  margin: 0.8em 0 2em 0;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.8em;
+}
+.icons span {
+  margin-left: 0.2em;
+  color: #1c1c1c;
+  font-size: 1em;
+}
+.blog {
+  background-color: #fff;
+  padding: 0.3em 0.5em;
+  font-size: 0.8em;
+  color: #6d6d6d;
+  font-weight: 400;
+  border-radius: 0.5em;
+}
+
+.shop {
+  color: #1c1c1c;
+  font-size: 0.9em;
+  font-weight: 500;
 }
