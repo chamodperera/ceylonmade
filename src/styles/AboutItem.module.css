@@ -1,21 +1,62 @@
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   max-width: 1600px;
-  margin: 1.5em;
+  margin: 1.5em 1em 1em 0em;
+  padding: 1em;
   background-color: #fff;
-  border-radius: 3em;
+  border-radius: 1.5em;
+  font-weight: 500;
   color: #006b6c;
 }
 
 .info {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
   color: #000;
-  width: 50%;
+  margin: 1em 1em 0em;
+  max-width: 50%;
+}
+
+.icontray {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6em;
 }
 
 .rotated {
   transform: rotate(270deg);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 3em 0em 0em 0.5em;
+  max-height: 200px;
+}
+
+.top {
+  font-size: larger;
+}
+
+/* no ellipsis is shown */
+.details {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 1.5em;
 }
