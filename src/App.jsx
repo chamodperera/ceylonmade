@@ -1,25 +1,28 @@
 import "./App.css";
-import Feed from "./components/Feed";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import { Outlet } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { getCurrentUser, observer } from "./services/getCurrentUser";
+import { useEffect, useState } from "react";
+import { router } from "./routes";
+import Loading from "./pages/Loading";
 
 function App() {
-  return (
-    <div className="app">
-      <div className="nav">
-        <Navbar />
-      </div>
+  // eslint-disable-next-line no-unused-vars
+  const [_currentUser, setCurrentUser] = useState(getCurrentUser());
+  const [isLoading, setIsLoading] = useState(true);
 
-      <div className="body">
-        <Outlet />
-      </div>
+  useEffect(() => {
+    observer.subscribe("authStateChanged", (user) => {
+      setCurrentUser(user);
+      setIsLoading(false);
 
-      <div>
-        <Sidebar />
-      </div>
-    </div>
-  );
+      if (!user) return router.navigate("/login");
+    });
+    return () => {
+      observer.unsubscribe("authStateChanged");
+    };
+  }, []);
+
+  return isLoading ? <Loading /> : <RouterProvider router={router} />;
 }
 
 export default App;
