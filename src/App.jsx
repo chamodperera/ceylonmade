@@ -1,7 +1,4 @@
 import "./App.css";
-import Feed from "./components/Feed";
-import Navbar from "./components/Navbar";
-import { Outlet } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import { getCurrentUser, observer } from "./services/getCurrentUser";
 import { useEffect, useState } from "react";
