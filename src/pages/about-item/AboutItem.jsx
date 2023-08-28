@@ -12,7 +12,7 @@ const AboutItem = () => {
   return (
     <div className={styles.container}>
       <Info />
-      <div className={styles.card}></div>
+      <Card />
     </div>
   );
 };
@@ -47,7 +47,20 @@ const Info = () => {
           laborum.
         </span>
       </div>
-      <div className={styles.comments}></div>
+      <div className={styles.comments}>
+        <p>Comments</p>
+        <div className={styles.section}>
+          <img
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80"
+            alt="user pic"
+          />
+          <input
+            type="text"
+            placeholder="Add a comment"
+            className={styles.comBox}
+          ></input>
+        </div>
+      </div>
     </div>
   );
 };
@@ -75,17 +88,44 @@ const Icontray = () => {
 
 const Card = ({ type, title, image, price, stars, comments, isBlog, shop }) => {
   return (
-    <div
-      className={styles.card}
-      style={{
-        backgroundImage: `linear-gradient(
+    <div>
+      <div
+        className={styles.card}
+        style={{
+          backgroundImage: `linear-gradient(
           0deg,
           #fff 0%,
           #fff 15.42%,
           rgba(255, 255, 255, 0) 80%
-        ),url(${image})`,
-      }}
-    ></div>
+        ),url(${"https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG90dGVyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"})`,
+        }}
+      >
+        <div className={styles.infoContainerItem}>
+          <div>Color Pots (Floral Pattern)</div>
+          <div className={styles.info1}>
+            <span className={styles.icons1}>
+              <ShootingStar size={28} color="#006b6c" weight="duotone" />
+              <span>{stars}</span>
+            </span>
+            <span className={styles.icons1}>
+              <ChatTeardrop size={28} color="#006b6c" weight="duotone" />
+              <span>{comments}</span>
+            </span>
+            <span className={styles.icons1}>
+              <BookmarkSimple size={28} color="#006b6c" weight="duotone" />
+            </span>
+            {isBlog && <span className={styles.blog}>Blog attached</span>}
+          </div>
+        </div>
+      </div>
+      <div className={styles.shopTag}>
+        <img
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="Profile pic"
+        />
+        <span>{shop}</span>
+      </div>
+    </div>
   );
 };
 
