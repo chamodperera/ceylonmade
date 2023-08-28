@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import Container from "./pages/Container";
 import Feed from "./pages/Feed";
 import Settings from "./pages/Settings";
-import AboutItem from "./pages/AboutItem.jsx";
+import AboutItem from "./pages/about-item/AboutItem.jsx";
 
 export const router = createBrowserRouter([
   {
