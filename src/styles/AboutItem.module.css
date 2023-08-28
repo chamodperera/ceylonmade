@@ -56,7 +56,3 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card img {
-  max-width: 100%;
-  border-radius: 1.5em;
-}

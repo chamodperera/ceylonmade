@@ -1,16 +1,18 @@
 import styles from "../../styles/AboutItem.module.css";
-import { SignOut, ShoppingCart, Heart } from "@phosphor-icons/react";
+import {
+  SignOut,
+  ShoppingCart,
+  Heart,
+  ShootingStar,
+  ChatTeardrop,
+  BookmarkSimple,
+} from "@phosphor-icons/react";
 
 const AboutItem = () => {
   return (
     <div className={styles.container}>
       <Info />
-      <div className={styles.card}>
-        <img
-          src="https://media.istockphoto.com/id/1309646840/photo/handicraft-packaging-from-natural-product.jpg?s=1024x1024&w=is&k=20&c=Bl76ozdl6daX-fQQf5SrmBGxOe9kHDusUIyvE4Y_qeI="
-          alt="example"
-        />
-      </div>
+      <div className={styles.card}></div>
     </div>
   );
 };
@@ -68,6 +70,22 @@ const Icontray = () => {
         Like
       </span>
     </div>
+  );
+};
+
+const Card = ({ type, title, image, price, stars, comments, isBlog, shop }) => {
+  return (
+    <div
+      className={styles.card}
+      style={{
+        backgroundImage: `linear-gradient(
+          0deg,
+          #fff 0%,
+          #fff 15.42%,
+          rgba(255, 255, 255, 0) 80%
+        ),url(${image})`,
+      }}
+    ></div>
   );
 };
 
