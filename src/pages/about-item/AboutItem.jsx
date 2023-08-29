@@ -8,16 +8,18 @@ import {
   ShootingStar,
   ChatTeardrop,
   BookmarkSimple,
+  CaretRight,
 } from "@phosphor-icons/react";
 
 const AboutItem = () => {
   return (
-    <div>
+    <div className={styles.bg}>
       <div className={styles.container}>
         <Info />
         <CustomCard />
       </div>
       <AboutShop />
+      <MoreItems />
     </div>
   );
 };
@@ -156,6 +158,7 @@ const AboutShop = ({ shop, shopProPic }) => {
         <span>
           {/* {shopProPic}
           {shop} */}
+          {/* Replace the below tags with above tags when backend is done  */}
           <img
             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="shop profile"
@@ -183,10 +186,34 @@ const AboutShop = ({ shop, shopProPic }) => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
+
       <div className={styles.related}>
-        {/* <Card />
-        <Card />
-        <Card /> */}
+        {/* Need to add cards that are related to the above mentioned shop  */}
+      </div>
+
+      <div id="map">{/* Show locations of the shops */}</div>
+    </div>
+  );
+};
+
+const MoreItems = (shop) => {
+  return (
+    <div className={styles.moreItemsBG}>
+      <div className={styles.mHeader}>
+        <span style={{ fontSize: "1.3em" }}>More From Shop</span>
+        <span
+          style={{ display: "flex", alignItems: "center", color: "#006b6c" }}
+        >
+          <CaretRight size={32} color="#006b6c" weight="duotone" />
+          View all products
+        </span>
+      </div>
+      <div className={styles.mContainer}>
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+        <div>Card 4</div>
+        <div>Card 5</div>
       </div>
     </div>
   );
