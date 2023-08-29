@@ -1,4 +1,6 @@
 import styles from "../../styles/AboutItem.module.css";
+import Card from "../../components/Card.jsx";
+
 import {
   SignOut,
   ShoppingCart,
@@ -10,9 +12,12 @@ import {
 
 const AboutItem = () => {
   return (
-    <div className={styles.container}>
-      <Info />
-      <Card />
+    <div>
+      <div className={styles.container}>
+        <Info />
+        <CustomCard />
+      </div>
+      <AboutShop />
     </div>
   );
 };
@@ -70,23 +75,37 @@ const Icontray = () => {
     <div className={styles.icontray}>
       <div className={styles.left}>
         <span className={styles.icon}>
-          <SignOut size={30} weight="duotone" className={styles.rotated} />
-          Sign Out
+          <SignOut
+            size={30}
+            color="#006b6c"
+            weight="duotone"
+            className={styles.rotated}
+          />
+          Share
         </span>
         <span className={styles.icon}>
-          <ShoppingCart size={30} weight="duotone" />
+          <ShoppingCart size={30} color="#006b6c" weight="duotone" />
           Add to cart
         </span>
       </div>
       <span className={styles.icon}>
-        <Heart size={30} weight="duotone" />
+        <Heart size={30} color="#006b6c" weight="duotone" />
         Like
       </span>
     </div>
   );
 };
 
-const Card = ({ type, title, image, price, stars, comments, isBlog, shop }) => {
+const CustomCard = ({
+  type,
+  title,
+  image,
+  price,
+  stars,
+  comments,
+  isBlog,
+  shop,
+}) => {
   return (
     <div>
       <div
@@ -129,4 +148,47 @@ const Card = ({ type, title, image, price, stars, comments, isBlog, shop }) => {
   );
 };
 
+const AboutShop = ({ shop, shopProPic }) => {
+  return (
+    <div className={styles.aboutShopContainer}>
+      <div className={styles.shopHeader}>
+        <p style={{ fontSize: "1.3em" }}>About Shop</p>
+        <span>
+          {/* {shopProPic}
+          {shop} */}
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="shop profile"
+          />
+          <p>Shop Name</p>
+        </span>
+      </div>
+      <div>
+        <p style={styles.para}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo sconsequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.{" "}
+        </p>
+        <p style={styles.para}>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo sconsequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div className={styles.related}>
+        {/* <Card />
+        <Card />
+        <Card /> */}
+      </div>
+    </div>
+  );
+};
 export default AboutItem;

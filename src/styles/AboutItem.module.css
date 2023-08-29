@@ -1,20 +1,24 @@
+* {
+  text-align: left;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
   max-width: 1600px;
   margin: 1.5em 1.5em 1em 0em;
-  padding: 1em;
+  padding: 1.5em;
   background-color: #fff;
   border-radius: 1.5em;
   font-weight: 500;
-  color: #006b6c;
+  color: #000;
+  /* color: #006b6c; */
 }
 
 .info {
   display: flex;
   flex-direction: column;
   text-align: left;
-  color: #000;
   margin: 1em 1em 0em;
   max-width: 50%;
 }
@@ -22,6 +26,7 @@
 .icontray {
   display: flex;
   justify-content: space-between;
+  color: #006b6c;
 }
 
 .left {
@@ -42,7 +47,7 @@
 .about {
   display: flex;
   flex-direction: column;
-  margin: 3em 0em 0em 0.5em;
+  margin: 2em 0em 0em 0.5em;
   max-height: 200px;
 }
 
@@ -52,7 +57,7 @@
 
 /* no ellipsis is shown */
 .details {
-  white-space: wrap;
+  /* white-space: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -130,11 +135,55 @@
   margin: 2em 1em;
   align-items: end;
 }
-.shopTag img,
+
 .section img {
   display: inline-block;
-  max-width: 55px;
-  height: 55px;
+  max-width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
+
+.aboutShopContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 1.5em 1.5em 1em 0em;
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: 1.5em;
+  font-weight: 500;
+  color: #000;
+}
+
+.shopTag img,
+.shopHeader img {
+  display: inline-block;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.shopHeader {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopHeader span {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #006b6c;
+  padding: 0em 1em 0em;
+  background-color: #dfffff;
+  border-radius: 1.5em;
+  min-width: 170px;
+}
+
+/* .related {
+  display: grid;
+  column-gap: 50px;
+} */
