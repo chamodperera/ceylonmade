@@ -13,7 +13,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0.5em auto; /*Center the div and add space around it */
-  padding: 1.5em 2em; /* Add padding inside the div */
+  padding: 1.5em 3em 1.5em 2em; /* Add padding inside the div */
   box-sizing: border-box; /* Include padding in the total width */
   background-color: #ffffff;
   color: #006b6c;
@@ -87,4 +87,53 @@
   align-items: center;
   margin: 0em 2em;
   cursor: pointer;
+}
+
+.recentItems,
+.moreItems {
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0.5em auto;
+  padding: 1.5em 4em 1.5em 2em;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.rHeading,
+.mHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rHeading span,
+.mHeading span {
+  display: flex;
+  align-items: center;
+}
+
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.6em;
+}
+
+.cardSection span {
+  margin: 1em auto;
+}
+
+.cardSection2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.cardSection2 span {
+  margin: auto 1em;
 }

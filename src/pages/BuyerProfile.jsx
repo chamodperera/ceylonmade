@@ -6,6 +6,8 @@ import {
   BookmarksSimple,
   User,
   Eye,
+  CaretRight,
+  GridFour,
 } from "@phosphor-icons/react";
 
 const BuyerProfile = () => {
@@ -58,8 +60,39 @@ const BuyerProfile = () => {
           </span>
         </div>
       </div>
-      <div className={styles.recentItems}></div>
-      <div className={styles.moreItems}></div>
+
+      <div className={styles.recentItems}>
+        <div className={styles.rHeading}>
+          <span style={{ fontSize: "1.2em", fontWeight: 550 }}>Recents</span>
+          <span style={{ color: "#006b6c", cursor: "pointer" }}>
+            <CaretRight size={28} />
+            View All
+          </span>
+        </div>
+        <div className={styles.cardSection}>
+          <span>Card 1</span>
+          <span>Card 2</span>
+          <span>Card 3</span>
+        </div>
+      </div>
+
+      <div className={styles.moreItems}>
+        <div className={styles.mHeading}>
+          <span style={{ fontSize: "1.2em", fontWeight: 550 }}>
+            More to love
+          </span>
+          <span style={{ color: "#006b6c", cursor: "pointer" }}>
+            <GridFour size={28} weight="duotone" />
+            Go to Feed
+          </span>
+        </div>
+        <div className={styles.cardSection2}>
+          <span>Card 1</span>
+          <span>Card 2</span>
+          <span>Card 3</span>
+          <span>Card 4</span>
+        </div>
+      </div>
     </div>
   );
 };
