@@ -1,5 +1,5 @@
 import styles from "../styles/SellerProfile.module.css";
-import { SignOut, Swap } from "@phosphor-icons/react";
+import { SignOut, Swap, ChartLine, CaretRight } from "@phosphor-icons/react";
 
 const SellerProfile = () => {
   return (
@@ -30,7 +30,9 @@ const SellerProfile = () => {
           </div>
         </div>
         <div className={styles.headingRight}>
-          <span>Go to marketplace</span>
+          <span style={{ marginRight: "0.7em", fontWeight: 450 }}>
+            Go to marketplace
+          </span>
           <button>
             <div className={styles.profileImage1}>
               <img
@@ -38,14 +40,40 @@ const SellerProfile = () => {
                 alt="shop_logo"
               />
             </div>
-            <span>Shop Name</span>
+            <span style={{ fontSize: "1.2em" }}>Shop Name </span>
           </button>
         </div>
       </div>
 
-      <div className={styles.statSection}></div>
+      <div className={styles.statSection}>
+        <div className={styles.sHeading}>
+          <span style={{ fontSize: "1.2em", fontWeight: 550 }}>
+            Sales order summary
+          </span>
+          <span style={{ cursor: "pointer", color: "#006b6c" }}>
+            <ChartLine size={28} color="#006b6c" weight="duotone" />
+            View Statistics
+          </span>
+        </div>
+        <div className={styles.info}>Statistics</div>
+      </div>
 
-      <div className={styles.orderSection}></div>
+      <div className={styles.orderSection}>
+        <div className={styles.oHeading}>
+          <span style={{ fontSize: "1.2em", fontWeight: 550 }}>
+            Recent sales orders
+          </span>
+          <span style={{ color: "#006b6c", cursor: "pointer" }}>
+            <CaretRight size={28} />
+            View all orders
+          </span>
+        </div>
+        <div className={styles.cardSection}>
+          <span>Card 1</span>
+          <span>Card 2</span>
+          <span>Card 3</span>
+        </div>
+      </div>
     </div>
   );
 };

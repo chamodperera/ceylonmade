@@ -80,18 +80,60 @@
   color: #006b6c;
   border: none;
   border-radius: 1.5em;
-  padding: 0.4em 1.2em;
+  padding: 0.4em 2em;
+  min-width: 200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   cursor: pointer;
 }
 
 .profileImage1 {
   display: flex;
-  margin: 0 auto;
-  width: 40px; /* Adjust the size as needed */
-  height: 40px; /* Same as width to maintain a circular shape */
+  width: 45px; /* Adjust the size as needed */
+  height: 45px; /* Same as width to maintain a circular shape */
   border-radius: 50%; /* Makes the container circular */
   overflow: hidden; /* Clips the image inside the circular container */
+}
+
+.statSection,
+.orderSection {
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0.5em auto;
+  padding: 1.5em 4em 1.5em 2em;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.sHeading,
+.oHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sHeading span,
+.oHeading span {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  margin-top: 0.6em;
+}
+
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.6em;
+}
+
+.cardSection span {
+  margin: 1em auto;
 }
