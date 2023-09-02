@@ -1,0 +1,54 @@
+/* Search.module.css */
+.bg {
+  text-align: left;
+  margin: 12em auto; /* Center the container horizontally */
+}
+
+.heading {
+  font-size: 5em; /* Adjust the font size as needed */
+  font-weight: bold; /* Optional, adjust as needed */
+  margin-left: 1em;
+  line-height: 0.9;
+  background-image: linear-gradient(to right, #006b6c, white);
+  background-clip: text; /*Apply gradient as text color*/
+  -webkit-background-clip: text; /*For Webkit browsers*/
+  color: transparent; /* Hide the original text color */
+  animation: gradientText 3s linear infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.searchBar {
+  width: 100%;
+  text-align: center;
+  padding: 10px; /*Optional: Add padding to the search bar */
+}
+
+.searchBar input {
+  background-color: rgb(57, 57, 57);
+  width: 90%;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.searchBar input:hover {
+  background-color: rgb(44, 44, 44); /* Change color to black on hover */
+}
+
+.filters {
+  margin-top: 10px; /* Add some spacing between the search bar and filters */
+}
